@@ -55,6 +55,7 @@ const displayModeOptions = [
   DisplayMode.List,
   DisplayMode.Wall,
   DisplayMode.Tagger,
+  DisplayMode.Lightbox,
 ];
 
 const criterionOptions = [

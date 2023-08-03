@@ -28,6 +28,7 @@ import { faPlay } from "@fortawesome/free-solid-svg-icons";
 import { SceneMergeModal } from "./SceneMergeDialog";
 import { objectTitle } from "src/core/files";
 import TextUtils from "src/utils/text";
+import SceneLightbox from "./SceneLightbox";
 
 const SceneItemList = makeItemList({
   filterMode: GQL.FilterMode.Scenes,
@@ -322,6 +323,9 @@ export const SceneList: React.FC<ISceneList> = ({
       }
       if (filter.displayMode === DisplayMode.Tagger) {
         return <Tagger scenes={result.data.findScenes.scenes} queue={queue} />;
+      }
+      if (filter.displayMode === DisplayMode.Lightbox) {
+        return <SceneLightbox scenes={result.data.findScenes.scenes} queue={queue} />;
       }
     }
 
