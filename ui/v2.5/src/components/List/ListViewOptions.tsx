@@ -86,7 +86,7 @@ export const ListViewOptions: React.FC<IListViewOptionsProps> = ({
         case DisplayMode.Tagger:
           return faTags;
         case DisplayMode.Lightbox:
-          return faImage
+          return faImage;
       }
     }
     function getLabel(option: DisplayMode) {

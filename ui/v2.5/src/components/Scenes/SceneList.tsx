@@ -325,7 +325,9 @@ export const SceneList: React.FC<ISceneList> = ({
         return <Tagger scenes={result.data.findScenes.scenes} queue={queue} />;
       }
       if (filter.displayMode === DisplayMode.Lightbox) {
-        return <SceneLightbox scenes={result.data.findScenes.scenes} queue={queue} />;
+        return (
+          <SceneLightbox scenes={result.data.findScenes.scenes} queue={queue} />
+        );
       }
     }
 
